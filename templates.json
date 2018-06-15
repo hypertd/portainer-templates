@@ -837,7 +837,7 @@
   },
   {
     "type": "stack",
-    "title": "x",
+    "title": "Laravel Stack",
     "description": "PHP7 Laravel5 Development Box",
     "note": "Deploys a Laravel container with PHP7 installed.",
     "categories": ["Laravel"],

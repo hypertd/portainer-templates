@@ -421,7 +421,7 @@
         "name": "DEV_SUBDOMAIN",
         "label": "subdomain",
         "description": "The subdomain to use during development. {sudomain}.dev.hypertd.com"
-      },
+      }
     ],
     "ports": [
       "80/tcp"

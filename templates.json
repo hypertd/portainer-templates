@@ -410,6 +410,26 @@
   },
   {
     "type": "container",
+    "title": "PHP7 Laravel",
+    "description": "A free and open-source CMS",
+    "categories": ["Laravel"],
+    "platform": "linux",
+    "logo": "https://github.com/laravel/art/blob/master/laravel-l-slant.png",
+    "image": "laravel-php7-2:latest",
+    "env": [
+      {
+        "name": "DEV_SUBDOMAIN",
+        "label": "subdomain",
+        "description": "The subdomain to use during development. {sudomain}.dev.hypertd.com"
+      },
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/var/www/html"]
+  },
+  {
+    "type": "container",
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "categories": ["CMS"],
@@ -851,7 +871,7 @@
       {
         "name": "DEV_SUBDOMAIN",
         "label": "subdomain",
-        "description": "The sudomain to use during development. {sudomain}.dev.hypertd.com"
+        "description": "The subdomain to use during development. {sudomain}.dev.hypertd.com"
       }
     ]
   }

@@ -834,5 +834,25 @@
         "bind": "/var/run/docker.sock"
       }
     ]
+  },
+  {
+    "type": "stack",
+    "title": "x",
+    "description": "PHP7 Laravel5 Development Box",
+    "note": "Deploys a Laravel container with PHP7 installed.",
+    "categories": ["Laravel"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/wordpress.png",
+    "repository": {
+      "url": "https://github.com/hypertd/portainer-templates",
+      "stackfile": "stacks/php7-laravel/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "DEV_SUBDOMAIN",
+        "label": "subdomain",
+        "description": "The sudomain to use during development. {sudomain}.dev.hypertd.com"
+      }
+    ]
   }
 ]

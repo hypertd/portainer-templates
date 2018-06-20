@@ -857,7 +857,7 @@
   },
   {
     "type": "stack",
-    "title": "Laravel Stack",
+    "title": "Laravel DEV Stack",
     "description": "PHP7 Laravel5 Development Box",
     "note": "Deploys a Laravel service stack with PHP7 installed.",
     "categories": ["Laravel"],
@@ -877,7 +877,7 @@
   },
   {
     "type": "stack",
-    "title": "Laravel Stack",
+    "title": "Laravel LIVE Stack",
     "description": "PHP7 Laravel5 Deployment Box",
     "note": "Deploys a Laravel service stack with PHP7 installed.",
     "categories": ["Laravel"],

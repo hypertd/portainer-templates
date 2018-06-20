@@ -5,7 +5,7 @@ networks:
     external: true
 
 services:
-  dev-laravel5-php7:
+  laravel5_php7:
     image: "hypertd/laravel-php7-2:latest"
     deploy:
         labels:

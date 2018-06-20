@@ -1,26 +1,27 @@
-version: '3'
+version: "3"
+
+networks:
+  traefik_default:
+    external: true
 
 services:
-   db:
-     image: mysql:5.7
-     volumes:
-       - db_data:/var/lib/mysql
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
-       MYSQL_DATABASE: wordpress
-       MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress
-
-   wordpress:
-     image: wordpress:latest
-     ports:
-       - 80
-     restart: always
-     environment:
-       WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
-
+  monsterhuntergroups:
+    image: "hypertd/laravel-php7-2:latest"
+    deploy:
+        labels:
+            - "traefik.port=80"
+            - "traefik.docker.network=traefik_default"
+            - "traefik.frontend.rule=Host:${DEV_SUBDOMAIN}.dev.hypertd.com"
+            - "traefik.frontend.entryPoints=http,https"
+            - "traefik.frontend.redirect=https"
+            - "traefik.frontend.redirect.entryPoint=https"
+    networks:
+      - traefik_default
+    volumes:
+      - data:/var/www/html
+      
 volumes:
-    db_data:
+    data:
+      driver: local-persist
+      driver_opts:
+        mountpoint: /mnt/docker-volumes/dev-${DEV_SUBDOMAIN}

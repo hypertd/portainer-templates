@@ -859,10 +859,10 @@
     "type": "stack",
     "title": "Laravel Stack",
     "description": "PHP7 Laravel5 Development Box",
-    "note": "Deploys a Laravel container with PHP7 installed.",
+    "note": "Deploys a Laravel service stack with PHP7 installed.",
     "categories": ["Laravel"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/wordpress.png",
+    "logo": "https://github.com/laravel/art/blob/master/laravel-l-slant.png?raw=true",
     "repository": {
       "url": "https://github.com/hypertd/portainer-templates",
       "stackfile": "stacks/php7-laravel/docker-stack.yml"

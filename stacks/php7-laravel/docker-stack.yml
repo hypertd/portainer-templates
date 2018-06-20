@@ -5,7 +5,7 @@ networks:
     external: true
 
 services:
-  monsterhuntergroups:
+  dev-laravel5-php7:
     image: "hypertd/laravel-php7-2:latest"
     deploy:
         labels:

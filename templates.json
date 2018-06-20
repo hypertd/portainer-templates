@@ -894,5 +894,25 @@
         "description": "Your live domain to use. ex mydomain.com"
       }
     ]
-  }
+  },
+  {
+    "type": "stack",
+    "title": "NGINX Static Server",
+    "description": "Minimal NGINX Server for static websites",
+    "note": "",
+    "categories": ["NGINX"],
+    "platform": "linux",
+    "logo": "https://github.com/laravel/art/blob/master/laravel-l-slant.png?raw=true",
+    "repository": {
+      "url": "https://github.com/hypertd/portainer-templates",
+      "stackfile": "stacks/nginx/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "LIVE_DOMAIN",
+        "label": "Domain Name",
+        "description": "Your live domain to use. ex mydomain.com"
+      }
+    ]
+  },
 ]

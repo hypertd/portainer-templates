@@ -1,0 +1,27 @@
+version: "3"
+
+networks:
+  traefik_default:
+    external: true
+
+services:
+  nginx:
+    image: nginx
+    deploy:
+        labels:
+            - "traefik.port=80"
+            - "traefik.docker.network=traefik_default"
+            - "traefik.frontend.rule=Host:${LIVE_DOMAIN}"
+            - "traefik.frontend.entryPoints=http,https"
+            - "traefik.frontend.redirect=https"
+            - "traefik.frontend.redirect.entryPoint=https"
+    networks:
+      - traefik_default
+    volumes:
+      - data:/usr/share/nginx/html
+      
+volumes:
+    data:
+      driver: local-persist
+      driver_opts:
+        mountpoint: /mnt/docker-volumes/${LIVE_DOMAIN}
